@@ -1,0 +1,58 @@
+body {
+    background-color: #FFECD7;
+}
+
+div {
+    
+    background-color: #008DB1;
+    border-color: #004E63;
+    max-width: 30%;
+
+    font-size: 1.5vw;
+    text-align: center;
+    border: 5px solid #004E63;
+    border-radius: 30px;
+    margin: 100px auto;
+}
+
+a {
+    text-decoration: none;
+    color: #91E4FB;
+    font-family: Helvetica;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1em;
+    margin: 1% 5%;
+}
+
+h1 {
+    font-family: Helvetica;
+    color: #FFFFFE;
+    font-size: 2.3em;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    font-family: Helvetica;
+    font-size: 1em;
+    color: white;
+    list-style-position: inside;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+p {
+    color: #FFD783;
+    font-family: "Brush Script MT";
+    font-size: 1.3em;
+    margin: 2% 5% 8% 5%;
+}
+
+img {
+    max-width: 75%;
+    border: 5px solid white;
+}
