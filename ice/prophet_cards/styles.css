@@ -10,7 +10,7 @@ div {
 
     font-size: 1.5vw;
     text-align: center;
-    border: 5px solid #004E63;
+    border: 0.5vw solid #004E63;
     border-radius: 30px;
     margin: 100px auto;
 }
@@ -42,7 +42,7 @@ li {
     color: white;
     list-style-position: inside;
     text-align: left;
-    margin-left: 10%;
+    margin-left: 6%;
     margin-right: 10%;
 }
 
@@ -55,5 +55,5 @@ p {
 
 img {
     max-width: 75%;
-    border: 5px solid white;
+    border: 0.5vw solid white;
 }
