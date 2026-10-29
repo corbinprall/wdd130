@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+header {
+    display: grid;
+    grid-template-columns: 15% auto;
+    background-color: #CC5200;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    font-family: Garamond;
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    
+    padding: 40px;
+}
+
+nav a:hover {
+    background: #C8BFE7;
+}
+
+.logo {
+    width: 100px;
+}
+
+#content {
+    background-color: #105625
+}
+
+#hero {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+#hero-box {
+    text-align: center;
+    grid-column: 1/4;
+    grid-row: 1/4;
+}
+
+#hero-img {
+    width: 100%;
+}
+
+#hero-msg {
+    font-size: 4em;
+    text-align: center;
+    
+    background-color: #22B14C;
+    padding: 0px 35px;
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+#info-tab {
+    border: 2px solid black;
+    grid-column: 2/5;
+}
+
+#suggestion {
+    grid-column: 6/9;
+}
+
+#home-msg {
+    border: 3px solid black;
+    text-align: center;
+    grid-column: 3/8;
+}
+
+ul {
+}
