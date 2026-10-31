@@ -14,30 +14,41 @@ nav {
 }
 
 nav a {
-    font-family: Garamond;
-    font-size: 2em;
+    font-family: Garamond, Arial;
+    font-size: 3vw;
     color: black;
     font-weight: bold;
     text-decoration: none;
     
-    padding: 40px;
+    padding: 50px;
 }
 
 nav a:hover {
     background: #C8BFE7;
+    height: 53%;
 }
 
 .logo {
-    width: 100px;
+    margin-left: 10%;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 200px;
+}
+
+body {
+    background-color: #105625;
 }
 
 #content {
-    background-color: #105625
+    width: 100%;
+    font-size: clamp(10px, 0.5vw, 20px);
 }
 
 #hero {
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
 }
 
 #hero-box {
@@ -48,6 +59,8 @@ nav a:hover {
 
 #hero-img {
     width: 100%;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 #hero-msg {
@@ -62,24 +75,87 @@ nav a:hover {
 }
 
 main {
+    margin: 30px 0;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
+    gap: 20px;
+
+    color: white;
 }
 
-#info-tab {
+#info-tab, th, td {
     border: 2px solid black;
+    font-size: 1.75em;
     grid-column: 2/5;
+    border-collapse: collapse;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #FF7F27;
+}
+
+tr:nth-child(odd) {
+    background-color: #CC5200;
 }
 
 #suggestion {
+    font-size: 3em;
     grid-column: 6/9;
+    align-self: center;
+}
+
+input {
+    font-size: 1em;
+    width: 100%;
 }
 
 #home-msg {
     border: 3px solid black;
+    background-color: #C8BFE7;
+    font-size: 3em;
+
+    color: black;
     text-align: center;
     grid-column: 3/8;
 }
 
-ul {
+#sites {
+    list-style-position: inside;
+    text-align: left;
+    margin-left: 10%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color:#CC5200;
+    font-size: clamp(20px, 3vw, 40px);
+}
+
+footer a {
+    align-self: center;
+    margin-left: 5%;
+}
+
+.social {
+    width: 5%;
+    text-align: center;
+}
+
+footer img {
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+button {
+    font-size: 1em;
+    background-color: #C8BFE7;
+}
+
+#creator {
+    margin-right: 5%;
 }

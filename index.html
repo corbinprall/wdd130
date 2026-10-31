@@ -26,9 +26,7 @@
 
         <div id="hero">
             <div id="hero-box">
-                <div id="hero-img">
-                    <img src="images/background_img.png" alt="Computer-Background"> <!--AI generated image-->
-                </div>
+                <img id="hero-img" src="images/background_img.png" alt="Computer-Background"> <!--AI generated image-->
             </div>
 
             <section id="hero-msg">
@@ -78,12 +76,14 @@
                 <p>
                     This is my portal page. Here, you will find connections to various pages that I have designed and created. I hope you enjoy them. The challenges are some of my favorites, but not entirely my own original work. The WWR was completed from examples and heavy teacher guidance. Lastly, the bio info is still yet to come. These include
                 </p>
-                <ul>
+                <ul id="sites">
                     <li> In Class Challenges (ICE)
                         <ul>
                             <li><a class="ice-link" href="ice/prophet_cards/oaks.html">Prophet Card</a></li>
                             <li><a class="ice-link" href="ice/halloween/index.html">Halloween Styling</a></li>
                             <li><a class="ice-link" href="ice/favorite_devo/favdevo.html">Favorite Devotional</a></li>
+                            <li><a class="ice-link" href="ice/positioning/positioning.html">CSS Positioning</a></li>
+                            <li><a class="ice-link" href="ice/grid_flags/flags.html">Grid Flags</a></li>
                         </ul>
                     </li>
 
@@ -94,12 +94,11 @@
         </main>
 
         <footer>
-            <a href="https://www.facebook.com/BYUID/" target="_blank"><img src="images/facebook.png" alt="FaceBook"></a>
-            <p>BYU-Idaho</p>
+            <a class="social" href="https://www.facebook.com/BYUID/" target="_blank"><img src="images/facebook.png" alt="FaceBook"></a>
 
-            <a href="index.html"><button>Home</button></a>
+            <button onclick="document.location='index.html'">Home</button>
 
-            <p>Corbin Prall</p>
+            <p id="creator">Corbin Prall</p>
         </footer>
 
     </div>
