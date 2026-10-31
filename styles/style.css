@@ -15,7 +15,7 @@ nav {
 
 nav a {
     font-family: Garamond, Arial;
-    font-size: 3vw;
+    font-size: 50px;
     color: black;
     font-weight: bold;
     text-decoration: none;
@@ -25,7 +25,6 @@ nav a {
 
 nav a:hover {
     background: #C8BFE7;
-    height: 53%;
 }
 
 .logo {
@@ -33,7 +32,7 @@ nav a:hover {
     align-self: center;
     justify-content: center;
     width: 100%;
-    max-width: 200px;
+    max-width: 148px;
 }
 
 body {
@@ -42,7 +41,7 @@ body {
 
 #content {
     width: 100%;
-    font-size: clamp(10px, 0.5vw, 20px);
+    font-size: 14px;
 }
 
 #hero {
@@ -85,7 +84,7 @@ main {
 
 #info-tab, th, td {
     border: 2px solid black;
-    font-size: 1.75em;
+    font-size: 1.6em;
     grid-column: 2/5;
     border-collapse: collapse;
     color: black;
