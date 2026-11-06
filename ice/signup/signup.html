@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed Sign Up</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background: rgb(120, 96, 64);
+        }
+       
+
+        main {
+            position: relative;
+            width: 700px;
+            background-color: white;
+            color: black;
+            border: 10px solid rgb(1, 1, 131);
+            border-radius: 30px;
+
+            font-size: 20px;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        #hero {
+            position: relative;
+        }
+
+        #hero-img {
+            width: 100%;
+            height: 300px;
+            
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        #hero-msg {
+            text-align: center;
+            position:  absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            font-size: 1.5em;
+            color: white;
+            text-shadow: 3px 3px black;
+        }
+
+        button {
+            font-size: 1em;
+        }
+
+        #closeBtn {
+            width: 30px;
+            height: 25px;
+            font-size: 18px;
+
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin: 20px 0px;
+        }
+
+        #books {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 5px;
+        }
+
+        #books img {
+            width: 100%;
+
+            margin-top: 30px;
+        }
+
+        #formContainer {
+            background-color: white;
+            text-align:center;
+            
+        }
+            
+        #myForm {
+            margin: 30px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+
+            font-size: 1.3em;
+        }
+
+        label {
+            text-align: left;
+            grid-column: 1/2;
+        }
+
+        section {
+            grid-column: 1/3;
+        }
+
+        input {
+            font-size: 1em;
+        }
+
+        
+        
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <main>
+        
+
+        
+            <div id="hero">
+                <div id="hero-msg">
+                    <h1>Daily Feed</h1>
+                    <h2>Scripture a Day</h2>
+                </div>
+                
+                <img id="hero-img" src="images/jesus_feeds_5000.jpeg" alt="Jesus Feeds 5 Thousand">
+                
+            </div>
+
+            <div id="formContainer">
+            <h3>Sign Up for Daily Scripture Feed</h3>
+            <form id="myForm">
+                <button type="button" id="closeBtn">X</button>
+
+
+                <label for="username">User Name:</label>
+                <input type="text" id="username" name="username" required> <br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required> <br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required> <br>
+
+                <label>Gender:</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+
+                <section>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to newsletter</label>
+                </section>
+
+                <section>
+                    <input type="checkbox" id="conditions" name="conditions" required>
+                    <label for="conditions">I acknowledge the terms and conditions</label>
+                </section>
+
+                <section>
+                    <button type="submit">Submit</button>
+                </section>
+            </form>
+            <div id="books"> 
+                <img src="images/old_testament.webp" alt="Old Testament">
+                <img src="images/new_testament.webp" alt="New Testament">
+                <img src="images/book_of_mormon.webp" alt="Book of Mormon">
+                <img src="images/doctrine_and_covenants.webp" alt="Doctrine and Covenants">
+                <img src="images/pearl_of_great_price.webp" alt="Pearl of Great Price">
+            </div>
+            </div>
+        </main>
+        
+
+        <div id="output"></div>
+    <script>
+        // Here is some Javascript to start looking forward to wdd131
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+         });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop form from actually submitting
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+                });
+    </script>
+
+</body>
+
+</html>
